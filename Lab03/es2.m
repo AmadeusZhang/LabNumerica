@@ -6,6 +6,8 @@ B = bucky;
 
 spy(B)
 
+% i punti blu sono gli elementi non nulli
+
 %% fattorizzazione LU di B
 [L,U,P] = lu(B);
 
@@ -26,3 +28,5 @@ subplot(2,2,2), spy(U), title('U')
 subplot(2,2,3), spy(P), title('P')
 subplot(2,2,4), spy(B), title('B')
 
+% si osserva il fenomeno di fill-in di matrici, aumentando gli elementi non
+% nulli

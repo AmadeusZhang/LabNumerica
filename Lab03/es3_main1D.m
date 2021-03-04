@@ -21,12 +21,12 @@ function [errors,solutions,femregion,Dati]=es3_main1D(TestName,nRef)
  
 
 
-addpath C:\Users\zhzj\github\labo\Numerica\FEM4MI\Assembly
-addpath C:\Users\zhzj\github\labo\Numerica\FEM4MI\BoundaryConditions
-addpath C:\Users\zhzj\github\labo\Numerica\FEM4MI\Errors
-addpath C:\Users\zhzj\github\labo\Numerica\FEM4MI\MeshGeneration
-addpath C:\Users\zhzj\github\labo\Numerica\FEM4MI\FESpace
-addpath C:\Users\zhzj\github\labo\Numerica\FEM4MI\Postprocessing
+addpath ..\FEM4MI\Assembly
+addpath ..\FEM4MI\BoundaryConditions
+addpath ..\FEM4MI\Errors
+addpath ..\FEM4MI\MeshGeneration
+addpath ..\FEM4MI\FESpace
+addpath ..\FEM4MI\Postprocessing
 
 
 %==========================================================================

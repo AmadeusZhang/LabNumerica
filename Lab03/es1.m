@@ -20,6 +20,11 @@ C = [
 
 %% condizioni LU
 
+% CNS: sottomatrici principali di M sono non singolari
+% CS: 
+%       - matrice è sdp
+%       - matrice è a dominanza diagonale stretta
+
 %% matrice C - situazione generale: CNS
 n = length(C);
 i = 1; dc = 1;
@@ -35,7 +40,7 @@ else
     disp('Fattorizzabile')
 end
 
-%% matrice B - metodo del dominanza diagonale: CN
+%% matrice B - metodo del dominanza diagonale: CS
 dd = diag(B)';
 sumB = sum(B,1)-dd;
 
