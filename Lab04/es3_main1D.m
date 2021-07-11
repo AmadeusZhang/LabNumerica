@@ -1,4 +1,4 @@
-function [errors,solutions,femregion,Dati]=C_main1D(TestName,nRef)
+function [errors,solutions,femregion,Dati, K2A]=es3_main1D(TestName,nRef)
 %==========================================================================
 % Solution of the Poisson's problem with linear finite elements
 % (Dirichlet boundary conditions)
@@ -33,7 +33,7 @@ addpath ..\FEM4MI\Postprocessing
 % LOAD DATA FOR TEST CASE
 %==========================================================================
 
-Dati = C_dati(TestName);
+Dati = es3_dati(TestName);
 Dati.nRefinement = nRef;
 
 %==========================================================================
@@ -64,6 +64,8 @@ Dati.nRefinement = nRef;
 % SOLVE THE LINEAR SYSTEM
 %==========================================================================
 
+% numero di condizionamento
+K2A = condest(A);
 uh = A\b;
 
 %==========================================================================
@@ -85,6 +87,5 @@ errors = [];
 if (Dati.plot_errors)
     [errors] = C_compute_errors(Dati,femregion,solutions);
 end
-
 
 
