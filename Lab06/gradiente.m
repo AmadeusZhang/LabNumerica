@@ -31,7 +31,8 @@ res_norm = norm(r) / b_norm;
 
 while ( res_norm > tol && k < nmax )
     z = P \ r;
-    alpha_dyn = ( z' * z ) / ( z' * A * z );        % alpha dinamico
+    % nel caso di metodi non precondizionati (P=I), si ha z = r
+    alpha_dyn = ( z' * r ) / ( z' * A * z );        % alpha dinamico
     x = x + alpha_dyn * z;
     r = b - A * x;
     res_norm = norm(r) / b_norm;
