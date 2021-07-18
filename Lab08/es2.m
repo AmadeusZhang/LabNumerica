@@ -24,8 +24,6 @@ yvect = f( xvect );
 
 n = 3;
 
-H = ( b-a ) / n;
-
 x_nod = linspace( a, b, n+1 );
 y_nod = f( x_nod );
 
