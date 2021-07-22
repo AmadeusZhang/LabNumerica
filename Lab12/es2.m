@@ -4,7 +4,7 @@ clear; close all; clc
 
 %% a) implementazione funzione Heun
 
-f = @(t, y) y ./ 3*t + ( log(t) + 1 ) ./ 3*t;
+f = @(t, y) y ./ (3*t) + ( log(t) + 1 ) ./ 3*t;
 
 y0 = -2;
 
