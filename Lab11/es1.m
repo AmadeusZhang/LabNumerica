@@ -96,9 +96,9 @@ legend( 'err_f', 'err_g' );
 grid on;
 
 %==========================================================================
-% COMMENTO
+% COMMENTO (teorema sul grado di esattezza)
 %==========================================================================
-% f abbatte velocemente errore: essendo Cinf la sua convergenza è
+% f abbatte velocemente errore: essendo C^inf la sua convergenza è
 % esponenziale, con 8 nodi si ottiene una accuratezza dell'epsilon macchina.
 %
 % g essendo una funzione non regolare, suo errore relativo decresce lentalmente.
