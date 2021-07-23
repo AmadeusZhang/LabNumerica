@@ -1,6 +1,4 @@
-% Implementazione del metodo di Heun per risoluzione del problema di Cauchy
-
-% metodo che sfrutta l'approssimazione degli integrali
+% Implementazione del metodo di Heun per risoluzione del problema di Cauchy metodo che sfrutta l'approssimazione degli integrali
 
 function [ th, uh ] = heun( f, t_0, t_max, y0, h )
 % creare il vettore degli instanti temporali --> :
