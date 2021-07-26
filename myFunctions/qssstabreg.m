@@ -56,5 +56,6 @@ map=[0.5 1 0.6;1 0 0];
 colormap(map); 
 %p=surf(xx,yy,q);
 %p=contour(xx,yy,q);
-p=contour(xx,yy,q,[2 2]);
+p=contourf(xx,yy,q,[2 2]);
+colorbar;
 view(2)
