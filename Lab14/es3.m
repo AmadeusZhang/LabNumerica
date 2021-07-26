@@ -2,7 +2,7 @@
 
 clear; close all; clc
 
-%% metodo a più passi lineare
+%% a) studiare consistenza e ordine del metodo a più passi lineare
 
 a = [ 18; -9; 2 ]/11;
 
@@ -56,3 +56,38 @@ while flag
 end
 
 fprintf("il metodo è di ordine %d\n", iter-1);
+
+%% b) determinare regione di assoluta stabilità --> qssstabreg
+xmi = -2; xma = 8;
+ymi = -4; yma = 4;
+xpti = 1e2; ypti = 1e2;
+
+% plot:
+figure();
+qssstabreg( a, b, xmi, xma, ymi, yma, xpti, ypti );
+grid on;
+
+%% c) assoluta stabilità di un problema di Cauchy --> qssmultistep
+% sol. esatta
+f_ex = 'exp(-x.^3)';
+
+% problema posto
+f = '-3 * (x.^2) .* y';
+df = '-3 * (x.^2)';
+
+% passi temporali
+H = [ 1/100 1 ];
+
+% impostazione per qssmultistep
+h = H(1);
+x0 = [ 0; h; 2*h ];     xf = 10;
+y0 = exp(-x0.^3);
+toll = 1e-6;    it_max = 50;
+
+% qssmultistep:
+[ x, un ] = qssmultistep( a, b, xf, x0, y0, h, f, df, toll, it_max );
+
+% confronto con la sol. esatta:
+figure();
+plot( x, un, ':*', x, eval(f_ex), 'k--' );
+legend('uh','y_{ex}');

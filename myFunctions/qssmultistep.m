@@ -7,14 +7,16 @@ function [x,u] = qssmultistep (a, b, xf, x0, u0, h, fun, dfun, toll, it_max)
 %	 Parametri di ingresso:
 %	 (N.B.: tutti i vettori di ingresso DEVONO essere colonna!)
 %	   a           vettore dei coeff. a_j (dim. p+1)
-%          b           vettore dei coeff. b_j (dim. p+2)
+%      b           vettore dei coeff. b_j (dim. p+2)
 %	               (se implicito, b(1) contiene b_(-1))
-%          x0	       vettore degli istanti iniziali
+%      x0	       vettore degli istanti iniziali
 %	   xf          estremo finale intervallo temporale di integrazione
 %	   u0          vettore dei dati iniziali (dim. p+1)
 %	   h           passo di integrazione
-%	   fun, dfun   stringhe contenenti f(x,y) e df/dy 
+%	   fun, dfun   *stringhe* contenenti f(x,y) e df/dy 
 %		       (usare il puntino, se necessario !)
+%
+%      N.B.:    fun, dfun in stringhe e variabile di x,y
 %
 %          SOLO SE IMPLICITO: 
 %
