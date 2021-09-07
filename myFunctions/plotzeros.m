@@ -9,7 +9,8 @@ function plotzeros(fun, x_limits, y_limits, varargin)
 % Parametri di ingresso:
 %
 % fun           function handle contenente la funzione associata al 
-%               sistema non lineare 2x2.
+%               sistema non lineare 2x2. ( X(1), X(2) )
+%               (VARIABILE VETTORIALE X contenente due componenti)
 % [X_MIN X_MAX] vettore contenente gli estremi dell'asse delle ascisse.
 % [Y_MIN Y_MAX] vettore contenente gli estremi dell'asse delle ordinate.
 %

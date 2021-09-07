@@ -2,7 +2,7 @@ function [ xvect, it] = newton( x0, nmax, tol, f, df, mol )
 
 % [ xvect, it] = newton( x0, nmax, tol, f, df, mol )
 %
-% Metodo di Newton per la ricerca degli zeri della funzione fun.
+% Metodo di Newton per la ricerca degli zeri della funzione f.
 % Test d'arresto basato sull'incremento tra due iterazioni successive.
 %
 % Parametri di ingresso:
@@ -10,7 +10,7 @@ function [ xvect, it] = newton( x0, nmax, tol, f, df, mol )
 % x0            Punto di partenza
 % nmax          Numero massimo di iterazioni
 % toll          Tolleranza sul test d'arresto
-% fun dfun      Anonymous function contenenti la funzione e la sua derivata
+% f df          Anonymous function contenenti la funzione e la sua derivata
 % mol           Molteplicita' dello zero che si vuole trovare
 %
 % Parametri di uscita:
