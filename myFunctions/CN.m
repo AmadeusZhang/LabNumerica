@@ -21,7 +21,7 @@ function [th, uh, iter_pf] = CN(f, t_0, t_max, y0, h)
 % -> th: vettore degli istanti in cui si calcola la soluzione discreta
 % -> uh: la soluzione discreta calcolata nei nodi temporali t_h
 
-th = t_0:h:t_max;
+th = t_0: h: t_max;
 N = length(th);
 uh = zeros(1,N);
 uh(1) = y0;

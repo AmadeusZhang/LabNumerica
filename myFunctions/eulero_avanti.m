@@ -1,4 +1,7 @@
 % [ th, uh ] = eulero_avanti( f, t_0, t_max, y0, h )
+% metodo ad un passo, esplicito
+% uh(ii+1) = uh(ii) + h * f( th(ii), uh(ii) );
+
 function [ th, uh ] = eulero_avanti( f, t_0, t_max, y0, h )
 
 % creare il vettore degli istanti temporali th --> :
