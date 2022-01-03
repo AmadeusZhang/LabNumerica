@@ -32,7 +32,7 @@ end
 
 %% implementare funzione solve
 b = [ 1 1 1 1 ]';
-xx = solve( L, U, b );
+xx = es1solve( L, U, b );
 
 % xx coincide con la soluzione ottenuta per A\b, c.v.d
 xvect = A\b;
