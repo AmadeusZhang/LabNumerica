@@ -1,4 +1,6 @@
 % Implementazione la formula di quadratura del trapezio composita
+%
+% I = trapcomp( a, b, N, f )
 
 function I = trapcomp( a, b, N, f )
 
